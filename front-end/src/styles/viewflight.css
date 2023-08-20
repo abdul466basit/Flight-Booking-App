@@ -1,0 +1,172 @@
+.viewflight-main{
+    padding: 68px 0 0 0;
+    background: #F0F2F5;
+    overflow-x: hidden;
+}
+
+.v-new-flights{
+    background-color: white;
+    margin: 0px 0px;
+    padding: 30px 30px 40px 80px;
+    width: 100%;
+}
+.v-new-flights h5{
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+.v-flight-title-01{
+    width: 130px ;
+    margin-bottom: 0;
+    padding: 8px 0 0 20px;
+    font-size: 16px;
+}
+.v-flight-title-02{
+    width: 130px ;
+    margin-bottom: 0;
+    padding: 8px 0 0 20px;
+    font-size: 16px;
+}
+.v-flight-title-03{
+    width: 140px ;
+    margin-bottom: 0;
+    padding: 8px 0 0 20px;
+    font-size: 16px;
+}
+.v-flight-title-04{
+    width: 150px ;
+    margin-bottom: 0;
+    padding: 8px 0 0 20px;
+    font-size: 16px;
+}
+.v-flight-title-05{
+    width: 120px ;
+    margin-bottom: 0;
+    padding: 8px 0 0 20px;
+    font-size: 16px;
+}
+.v-flight-title-06{
+    width: 110px ;
+    margin-bottom: 0;
+    padding: 8px 0 0 40px;
+    font-size: 16px;
+}
+.flight-detail{
+    padding-top: 15px;
+}
+.flight-icon{
+    font-size: 32px;
+    padding-top: 8px;
+}
+.edit-flight-btn{
+    color: #16222a;
+    padding: 0;
+    margin: 0;
+    border-color: blue;
+}
+
+/*------------------------Edit Flight CSS-----------*/
+
+.editflight-main{
+    padding: 68px 0 0 0;
+    background: #F0F2F5;
+    overflow-x: hidden;
+}
+
+.search-button {
+    display: flex;
+    justify-content: end;
+    margin-top: 0px;
+    padding: 0 0 0 30px;
+    color: #16222a;
+  }
+  
+  .search-button p {
+    width: 150px;
+    max-width: 130px;
+    margin: 0;
+    padding: 8px 27px;
+    font-size: 16px;
+    background-color: #00093c;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  .search-button p:hover {
+    background-color: #fff;
+    color: #00093c;
+    font-weight: 600;
+  }
+  
+  .search-button p:active {
+    background-color: grey;
+    color: #0F18A2;
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .custom-datepicker .ant-picker-input input::placeholder {
+    color: black;
+  }
+
+  .time-input {
+    position: relative;
+  }
+
+  
+.custom-timepicker{
+    color: black;
+}
+.custom-timepicker::placeholder{
+    color: black;
+}
+
+.edit-flight{
+    width: 220px;
+}
+.edit-flight-1{
+    width: 250px;
+}
+.mycontainer{
+    justify-content: flex-start;
+    padding-top: 20px;
+}
+.signup-form{
+    width: auto;
+}
+
+.mycontainer-1{
+    width: 500px;
+}
+.mycontainer-2{
+    width: 200px;
+}
+.mycontainer-main{
+    padding: 0 20px;
+}
+.flight-seats h5{
+    font-size: 18px;
+    margin: 25px 10px 20px 20px;
+}
+.flight-seats p{
+    font-size: 17px;
+    padding: 0px 20px;
+}
+.signup-form{
+    padding: 40px 80px;
+}
+
+
+.input-group {
+    position: relative;
+  }
+  
+  .input-group-addon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }

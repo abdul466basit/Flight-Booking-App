@@ -1,0 +1,17 @@
+.breadcrumb{
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #000317);
+    color: white;
+}
+
+.col-12{
+    font-size: 20px;
+}
+
+.col-12 p{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+

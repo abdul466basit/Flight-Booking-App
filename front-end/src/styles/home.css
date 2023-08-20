@@ -1,0 +1,394 @@
+.section-container {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #9b9b9b;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
+  gap: 0rem;
+}
+
+.box{
+  background: #00093c;
+  box-shadow: 0px 5px 5px -1px rgba(0, 0, 0, 0.671);
+  /* background: linear-gradient(to right, #00093c, #000317); */
+  color: white;
+  border-radius: 20px 20px 0 0;
+  padding: 1rem;
+  justify-content: center;
+
+}
+
+.searchInput {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  background: #fff;
+  color: black;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  justify-content: start;
+  margin-top: 0px;
+}
+
+.location-select {
+  max-width: 430px;
+  padding: 20px 10px 0px 10px;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+  
+}
+
+.date-select {
+  max-width: 350px;
+  padding: 20px 10px 0px 0px;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.passenger-select {
+  max-width: 200px;
+  padding: 20px 10px 0px 10px;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
+
+.texts {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+.input-row {
+  /* margin-bottom: 0.5rem; */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.iconDiv {
+  display: flex;
+  align-items: center;
+  padding-bottom: 8px;
+}
+.form-search{
+  border: none;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  color: black;
+}
+
+.btns {
+  width: 100%;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-btn {
+  padding: 10px;
+  font-size: 13px;
+  border-radius: 3rem;
+  text-align: center;
+  margin: 5px;
+  background-color: #D9D9D9;
+  flex: 0 0 calc(33.33% - 50px);
+  transition: background-color 0.4s ease;
+}
+
+.single-btn:hover {
+  background-color: #0F18A2;
+  color: white;
+  font-weight: 500;
+}
+
+.single-btn.active {
+  background-color: #0F18A2;
+  color: white;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+
+  .single-btn {
+    flex: 0 0 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .single-btn {
+    flex: 0 0 100%;
+  }
+  .tophead{
+    padding-top: 3.5rem;
+  }
+}
+
+.passenger-dropdown {
+  margin-top: 0;
+  font-family: Arial, sans-serif;
+  width: 200px;
+}
+
+.passenger-no {
+  /* appearance: none; */
+  /* border: none; */
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+
+  color: #333;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.passenger-no:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.passenger-no option {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.passenger-no::-ms-expand {
+  display: none;
+}
+
+.passenger-no:hover {
+  background-color: #e6e6e6;
+}
+
+.passenger-no:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+.select.date {
+  display: inline-block;
+  position: relative;
+}
+  
+.select.date .ant-picker {
+  width: auto; 
+  min-width: 230px;
+}
+
+.select.date .ant-picker-input {
+  border-radius: 4px;
+}
+
+.select.date .ant-picker-input input {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: #333;
+}
+  
+.select.date .ant-picker:hover .ant-picker-input input,
+.select.date .ant-picker-focused .ant-picker-input input {
+  border-color: #1890ff;
+}
+
+.select.date .ant-picker-range .ant-picker-input input::placeholder {
+  color: #333;
+}
+
+.select.date .ant-picker-range .ant-picker-input input,
+.select.date .ant-picker-range-separator:before,
+.select.date .ant-picker-range-separator:after {
+  color: #333; 
+}
+
+/* Adjustments for smaller screens */
+
+@media (max-width: 576px) {
+  .section-container {
+    padding: 1rem;
+  }
+
+  .carousel-caption {
+    padding: 1rem;
+  }
+
+  .single-btn {
+    font-size: 12px;
+  }
+
+  .passenger-dropdown {
+    width: 100%;
+  }
+}
+
+.search-button {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  padding-right: 100px;
+}
+
+.search-button button {
+  width: 150px;
+  max-width: 130px;
+  padding: 8px 10px;
+  font-size: 16px;
+  background-color: #00093c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.search-button button:hover {
+  background-color: #fff;
+  color: #00093c;
+  font-weight: 600;
+}
+
+.search-button button:active {
+  background-color: grey;
+  color: #0F18A2;
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 480px) {
+  .search-button {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-button button {
+    margin-top: 10px;
+  }
+}
+
+/*----------------------------Airline Ad-------------------*/
+.support-home{
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+  padding-top: 10px !important;
+}
+.image-comb{
+  width: 100%;
+  max-width: 420px;
+}
+
+.titlesDiv{
+  text-align: center;
+}
+
+small{
+  letter-spacing: 0.8rem;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: black;
+  line-height: 1.5rem;
+}
+.infoDiv{
+  margin-top: 50px;
+  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.textDiv{
+  margin-left: 10%;
+  gap: 1.5rem;
+  width: 35%;
+}
+.imgDiv{
+  margin: auto;
+  width: 35%;
+}
+
+
+.number{
+  padding: 5px 12px;
+  width: 40px;
+  border-radius: 3rem;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+.singleinfo h4{
+  padding-top: 10px;
+}
+
+.colorOne{
+  background: #1C93D3;
+}
+.colorTwo{
+  background: #56AB44;
+}
+.colorThree{
+  background: #D35297;
+}
+
+@media (max-width: 1198px) {
+  .textDiv{
+    margin-left: 5%;
+    gap: 1.5rem;
+    width: 45%;
+  }
+  .imgDiv{
+    margin: auto;
+    width: 40%;
+  }
+}
+
+@media (max-width: 990px) {
+
+  .textDiv{
+    margin-left: 0%;
+    gap: 1.5rem;
+    width: 50%;
+  }
+  .imgDiv{
+    margin: auto;
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .infoDiv {
+    flex-direction: column;
+  }
+
+  .textDiv,
+  .imgDiv {
+    width: 85%;
+    margin: 0% 10% ;
+  }
+}
+
+@media (max-width: 480px) {
+  .number {
+    font-size: 12px;
+  }
+
+  .textDiv,
+  .imgDiv {
+    width: 75%;
+    margin: 0% 10% ;
+  }
+}

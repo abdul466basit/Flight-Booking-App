@@ -1,0 +1,229 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'poppons', sans-serif;
+}
+
+.main-footer{
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to right, #00093c, #000317);
+    color: white;
+    padding: 30px 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+}
+.row{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.footer-icon{
+    height: 60px;
+}
+/*--------------------------CSS For Column 01---------------*/
+.column-01{
+    width: 350px;
+}
+
+/*---------------------------CSS FOR Column 02--------------*/
+.column-02{
+    width: 250px;
+    margin-left: 50px;
+}
+.column-02 h3{
+    width: fit-content;
+    margin-bottom: 30px ;
+    position: relative;
+}
+
+.column-02 h4{
+    width: fit-content;
+    font-size: 16px;
+    margin-top: 30px;
+    position: relative;
+}
+
+.column-02 p{
+    width: fit-content;
+    line-height: 35%;  
+}
+
+.email-id{
+    width: fit-content;
+    /* border-bottom: 1px solid #ccc; */
+    margin-top: 20%;
+}
+
+/*------------------------CSS For Column 03-----------------*/
+ul li{
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.column-03{
+    width: 100px;
+    margin-left: 0px;
+}
+.column-03 h3{
+    width: fit-content;
+    margin-bottom: 30px ;
+    position: relative;
+}
+.column-03 ul{
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.column-03 li{
+    width: fit-content;
+    line-height: 15px;  
+}
+
+/*----------------------CSS For Column 04------------------*/
+.column-04{
+    width: 200px;
+    margin-left: 0px;
+}
+
+form{
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+    margin-top: 26px;
+}
+
+.email-ricon{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+form input{
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+form button{
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+form button .email-arrow{
+    color: #ccc;
+    font-size: 20px;
+}
+
+.footer-sm{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+
+.copyright{
+    text-align: center;
+}
+
+/*-----------------Responsive max-width 1198px--------------*/
+
+@media (max-width: 1198px){
+    .row{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .column-01{
+        width: 350px;
+        min-width: 250px;
+    }
+    .column-02{
+        width: 250px;
+        min-width: 220px;
+        margin-left: 10px;
+    }
+    .column-03{
+        min-width: 110px;
+        width: 200px;
+        margin-left: 0px;
+    }
+    .column-04{
+        width: 200px;
+        min-width: 190px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 1198px){
+    .column-03{
+        min-width: 90px;
+        width: 200px;
+        margin-left: 0px;
+    }
+    .column-04 h3{
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 788px){
+    .column-01{
+        width: auto;
+    }
+    .column-02 h3{
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+    .column-02 h4{
+        margin-top: 20px;
+    }
+    .email-id{
+        margin-top: 30px;
+    }
+    .column-03 h3{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media (max-width: 598px){
+    .column-02 h3{
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+    .column-02 h4{
+        margin-top: 15px;
+    }
+    .email-id{
+        margin-top: 20px;
+    }
+    .column-03 h3{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .column-04 h3{
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+}
+

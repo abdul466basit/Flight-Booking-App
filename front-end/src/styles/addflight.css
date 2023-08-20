@@ -1,0 +1,25 @@
+.addflight-main{
+    padding: 68px 0 0 0;
+    background: #F0F2F5;
+    overflow-x: hidden;
+}
+
+.input-wrapper {
+    position: relative;
+  }
+  
+  .dollar-icon-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+  
+  .currency-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #262626;
+  }
+  

@@ -1,0 +1,150 @@
+DDL create tables statement
+
+CREATE TABLE `admin` (
+  `admin_id` varchar(15) NOT NULL,
+  `password` varchar(15) NOT NULL,
+  PRIMARY KEY (`admin_id`),
+  KEY `idx_password` (`password`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `flight` (
+  `flight_no` varchar(15) NOT NULL,
+  `departure_city` varchar(45) NOT NULL,
+  `arrival_city` varchar(45) NOT NULL,
+  `depart_datetime` datetime NOT NULL,
+  `arr_datetime` datetime NOT NULL,
+  `seats_available` int DEFAULT NULL,
+  `seats_left` int DEFAULT NULL,
+  PRIMARY KEY (`flight_no`),
+  KEY `idx_flight_cities` (`departure_city`,`arrival_city`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `passenger_details` (
+  `email` varchar(40) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  `first_name` varchar(15) NOT NULL,
+  `last_name` varchar(15) NOT NULL,
+  `age` int DEFAULT NULL,
+  `gender` varchar(8) DEFAULT NULL,
+  `address` varchar(55) DEFAULT NULL,
+  `passport_no` varchar(45) NOT NULL,
+  `nationality` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`email`),
+  KEY `idx_passenger_details` (`first_name`,`last_name`,`password`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `passenger` (
+  `passenger_id` varchar(25) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  PRIMARY KEY (`passenger_id`),
+  KEY `email_idx` (`email`),
+  CONSTRAINT `sv_p_emai_fk` FOREIGN KEY (`email`) REFERENCES `passenger_details` (`email`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `ticket` (
+  `ticket_no` varchar(25) NOT NULL,
+  `class` varchar(15) DEFAULT NULL,
+  `seat_no` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`ticket_no`),
+  KEY `idx_Ticket_SeatNo` (`seat_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `payment` (
+  `transaction_id` varchar(25) NOT NULL,
+  `status` varchar(15) DEFAULT NULL,
+  `account_no` int NOT NULL,
+  PRIMARY KEY (`transaction_id`),
+  KEY `idx_Payment_accountno` (`account_no`),
+  KEY `idx_Payment_status` (`status`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `receives_payment` (
+  `ticket_no` varchar(25) NOT NULL,
+  `transaction_id` varchar(25) DEFAULT NULL,
+  `amount` int DEFAULT NULL,
+  PRIMARY KEY (`ticket_no`),
+  KEY `rp_trid_fk_idx` (`transaction_id`),
+  CONSTRAINT `sv_rp_tno_fk` FOREIGN KEY (`ticket_no`) REFERENCES `ticket` (`ticket_no`),
+  CONSTRAINT `sv_rp_trid_fk` FOREIGN KEY (`transaction_id`) REFERENCES `payment` (`transaction_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `ticket_booked` (
+  `passenger_id` varchar(25) NOT NULL,
+  `ticket_no` varchar(25) NOT NULL,
+  `booking_datetime` datetime DEFAULT NULL,
+  PRIMARY KEY (`passenger_id`,`ticket_no`),
+  KEY `t_tno_fk_idx` (`ticket_no`),
+  CONSTRAINT `sv_t_pid_fk` FOREIGN KEY (`passenger_id`) REFERENCES `passenger` (`passenger_id`),
+  CONSTRAINT `sv_t_tno_fk` FOREIGN KEY (`ticket_no`) REFERENCES `ticket` (`ticket_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `booked_flight` (
+  `ticket_no` varchar(25) NOT NULL,
+  `flight_no` varchar(15) DEFAULT NULL,
+  PRIMARY KEY (`ticket_no`),
+  KEY `bt_fno_fk_idx` (`flight_no`),
+  CONSTRAINT `sv_bt_fno_fk` FOREIGN KEY (`flight_no`) REFERENCES `flight` (`flight_no`),
+  CONSTRAINT `sv_bt_tno_fk` FOREIGN KEY (`ticket_no`) REFERENCES `ticket` (`ticket_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `checks_flight` (
+  `passenger_id` varchar(25) NOT NULL,
+  `flight_no` varchar(15) NOT NULL,
+  PRIMARY KEY (`passenger_id`,`flight_no`),
+  KEY `cf_fno_fk_idx` (`flight_no`),
+  CONSTRAINT `sv_cf_fno_fk` FOREIGN KEY (`flight_no`) REFERENCES `flight` (`flight_no`),
+  CONSTRAINT `sv_cf_pid_fk` FOREIGN KEY (`passenger_id`) REFERENCES `passenger` (`passenger_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `class` (
+  `flight_no` varchar(15) NOT NULL,
+  `type` varchar(45) NOT NULL,
+  `total_seats` int DEFAULT NULL,
+  `luggage_capacity` int DEFAULT NULL,
+  PRIMARY KEY (`flight_no`,`type`),
+  KEY `idx_Class_type` (`type`),
+  CONSTRAINT `sv_c_fno_fk` FOREIGN KEY (`flight_no`) REFERENCES `flight` (`flight_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `domestic` (
+  `flight_no` varchar(15) NOT NULL,
+  `local_gov_tax` int DEFAULT NULL,
+  PRIMARY KEY (`flight_no`),
+  KEY `idx_Domestic_LocalGovTax` (`local_gov_tax`),
+  CONSTRAINT `sv_d_fno_fk` FOREIGN KEY (`flight_no`) REFERENCES `flight` (`flight_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+CREATE TABLE `international` (
+  `flight_no` varchar(15) NOT NULL,
+  `int_custom_duty` int DEFAULT NULL,
+  PRIMARY KEY (`flight_no`),
+  KEY `idx_International_IntCustomDuty` (`int_custom_duty`),
+  CONSTRAINT `sv_int_fno_fk` FOREIGN KEY (`flight_no`) REFERENCES `flight` (`flight_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `manage_flights` (
+  `flight_no` varchar(15) NOT NULL,
+  `admin_id` varchar(15) NOT NULL,
+  PRIMARY KEY (`flight_no`,`admin_id`),
+  KEY `mf_aid_fk_idx` (`admin_id`),
+  CONSTRAINT `sv_mf_aid_fk` FOREIGN KEY (`admin_id`) REFERENCES `admin` (`admin_id`),
+  CONSTRAINT `sv_mf_fno_fk` FOREIGN KEY (`flight_no`) REFERENCES `flight` (`flight_no`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `mobile_no` (
+  `passenger_id` varchar(25) NOT NULL,
+  `mobile_no` int NOT NULL,
+  PRIMARY KEY (`passenger_id`,`mobile_no`),
+  KEY `idx_mobile_no` (`mobile_no`),
+  CONSTRAINT `sv_m_pid_fk` FOREIGN KEY (`passenger_id`) REFERENCES `passenger` (`passenger_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
+
+
+

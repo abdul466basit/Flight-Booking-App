@@ -1,0 +1,72 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: "Rubik", sans-serif;
+  }
+  
+  a{
+    text-decoration: none;
+    display: inline-block;
+  }
+  .gap-10{
+    gap: 10px
+  }
+  .gap-15{
+    gap: 15px
+  }
+  .gap-20{
+    gap: 20px;
+  }
+  .gap-30{
+    gap: 30px;
+  }
+
+.contact-wrapper-inner{
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    gap: 15px;
+  }
+  .contact-wrapper-inner > div{
+    width: 48%;
+  }
+  .contact-title{
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 35px;
+    text-align: left;
+  }
+  .contact-wrapper-inner form .form-control{
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    border-color: transparent;
+    padding: 10px;
+  }
+
+  .button{
+    background-color: #131921;
+    color: #fff;
+    font-size: 12px;
+    padding: 9px 19px;
+    border-radius: 20px;
+  }
+  .button:hover{
+    background-color: white;
+    color: #131921;
+    font-weight: 600;
+  }
+  .button-cancel{
+    background-color: white;
+    color: #131921;
+    font-size: 14px;
+    padding: 8px 22px;
+    border-radius: 20px;
+  }  
+
+   */

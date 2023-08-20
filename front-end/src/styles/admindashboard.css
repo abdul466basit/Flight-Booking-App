@@ -1,0 +1,353 @@
+.admindashboard-main{
+    padding: 68px 0 0 0;
+    background: #F0F2F5;
+    overflow-x: hidden;
+}
+
+.admin-title{
+    background-color: white;
+    padding: 10px 20px;
+    margin: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #d0d0d0;
+    display: flex;
+    justify-content: space-between;
+}
+.admin-title h5{
+    margin-bottom: 8px;
+    margin-top: 4px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.admin-icon{
+    font-size: 25px;
+}
+.admin-welcome{
+    background-color: white;
+    border-radius: 10px;
+    justify-content: space-between;
+    margin: 10px 30px;
+}
+
+.side-text{
+    padding: 10px 20px;
+    margin: 20px 30px;
+}
+.side-text p{
+    font-size: 16px;
+}
+.side-icon img{
+    height: 12rem;
+    margin: 10px 100px 0 20px;
+}
+
+
+/*--------------------------------------------------------*/
+
+.card-body-01, .card-body-02, .card-body-03, .card-body-04, p h5{
+    padding: 20px;
+    border-radius: 15px;
+    width: 25%;
+    color: white;
+}
+
+.totals{
+    margin: 20px 30px;
+}
+
+.card-body-01{
+    background: linear-gradient(to right, #4ecdc4, #556270);
+}
+.card-body-02{
+    background: linear-gradient(to right, #cc2b5e, #753a88);
+}
+.card-body-03{
+    background: linear-gradient(to right, #134e5e, #71b280);
+}
+.card-body-04{
+    background: linear-gradient(to right, #16222a, #3a6073);
+}
+.card-body-inner{
+    justify-content: space-between;
+}
+.totals-icon{
+    font-size: 30px;
+}
+.card-body-inner p{
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+.card-body-inner h5{
+    font-size: 16px;
+}
+.progress{
+    opacity: 0.8;
+    background: transparent;
+}
+.progress-bar{
+    background-color: white;
+    border-radius: 5px;
+}
+
+.admin-function{
+    margin: 10px 30px;
+    padding: 10px 0px;
+}
+.view-ft, .add-ft, .edit-ft{
+    background-color: white;
+    padding: 5% 2%;
+    width: 32%;
+    box-shadow: 0 2px 6px #d0d0d0;
+    border-radius: 5px;
+}
+.view-ft, .add-ft, .edit-ft, h5{
+    font-weight: 700;
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 8px;
+    gap: 15px;
+}
+.function-icon{
+    font-size: 52px;
+    color: #59bfd1;
+    margin-left: 9%;
+}
+.edit-ft .function-icon{
+    color: #f3ad55;
+}
+.view-ft .function-icon{
+    color: #f355a9;
+}
+.view-ft:hover, 
+.add-ft:hover, 
+.edit-ft:hover {
+    background-color: #e9e9e9;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.newly-added{
+    margin: 10px 30px;
+    gap: 20px;
+}
+.new-users, .new-flights{
+    background-color: white;
+    padding: 10px 30px 40px 30px;
+    width: 50%;
+}
+.line {
+    border-top: 2px solid #a3a3a3;
+    width: 100%;
+}
+.user-title-01{
+    width: 230px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.user-title-02{
+    width: 70px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 16px;
+}
+.user-title-03{
+    width: 120px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.user-title-04{
+    width: 130px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.new-users h5{
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+.user-detail{
+    padding-top: 16px;
+}
+.user-icon{
+    font-size: 20px;
+}
+.new-flights h5{
+    margin-bottom: 16px;
+    font-size: 24px;
+}
+.flight-title-01{
+    width: 130px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.flight-title-02{
+    width: 130px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.flight-title-03{
+    width: 140px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+.flight-title-04{
+    width: 150px ;
+    margin-bottom: 0;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.btn{
+    color: #00093c;
+    border-color: #00093c;
+}
+.btn:hover{
+    background-color: #0a144e;
+    color: white;
+    border-color: #020e4e;
+}
+.btn-div{
+    margin-top: 30px;
+}
+
+@media (max-width: 840px){
+    .side-text{
+        padding: 10px 20px;
+        margin: 10px 20px;
+    }
+    .side-text p{
+        font-size: 14px;
+    }
+    .side-icon img{
+        height: 10rem;
+        margin: 10px 50px 0 20px;
+    }
+    .btn{
+        font-size: 12px;
+    }
+    .btn-div{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 624px){
+    .side-text{
+        padding: 10px 15px;
+        margin: 10px 15px;
+    }
+    .side-icon img{
+        height: 10rem;
+        margin: 10px 30px 0 20px;
+    }
+}
+@media (max-width: 578px){
+    .admin-welcome{
+        flex-wrap: wrap;
+    }
+    .side-icon img{
+        height: 10rem;
+        margin: 0px 30px 0 30px;
+    }
+}
+
+
+@media (max-width: 858px) {
+    .totals {
+      flex-wrap: wrap;
+    }
+  
+    .card-body-01,
+    .card-body-02,
+    .card-body-03,
+    .card-body-04 {
+      flex-basis: 48%;
+    }
+  }
+
+@media (max-width: 660px) {
+    .card-body-01,
+    .card-body-02,
+    .card-body-03,
+    .card-body-04 {
+      flex-basis: 100%;
+    }
+  }
+
+@media (max-width: 902px) {
+    .view-ft, .add-ft, .edit-ft{
+        padding: 4% 2%;
+    }
+    .view-ft, .add-ft, .edit-ft, h5{
+        font-weight: 600;
+        font-size: 20px;
+        gap: 12px;
+    }
+    .admin-function{
+        gap: 15px !important;
+    }
+    .function-icon{
+        font-size: 42px;
+        color: #59bfd1;
+        margin-left: 9%;
+    }
+}
+
+@media (max-width: 550px){
+    .admin-function{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px !important;
+        margin: 0 30px;
+        padding: 0;
+
+    }
+    .view-ft, .add-ft, .edit-ft{
+        flex-basis: 100%;
+        padding: 7% 2%;
+    }
+    .view-ft, .add-ft, .edit-ft, h5{
+        font-weight: 700;
+        font-size: 22px;
+        margin-top: 10px;
+        margin-bottom: 8px;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 975px){
+    .newly-added{
+        flex-wrap: wrap;
+    }
+    .new-users, .new-flights{
+        flex-basis: 100%;
+    }
+}
+
+@media (max-width: 444px){
+    .user-title-01,
+    .user-title-02,
+    .user-title-03,
+    .user-title-04{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .flight-title-01,
+    .flight-title-02,
+    .flight-title-03,
+    .flight-title-04{
+        font-size: 14px;
+        padding-left: 10px;
+    }
+    .new-flights{
+        padding: 10px 20px;
+    }
+    .new-users{
+        padding: 10px 20px;
+    }
+
+}

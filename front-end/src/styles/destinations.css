@@ -1,0 +1,115 @@
+
+
+.title{
+    text-align: center;
+    margin: 2rem;
+  }
+
+.destinations{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+  .container-destinations{
+   
+    max-width: 1300px;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 1rem 2.5rem;
+    --font-color: #323232;
+    --bg-color: #f3f3f3;
+    width: 21rem;
+    height: 18rem;
+    border-radius: 4px;
+    background: var(--bg-color);
+    box-shadow: 0px 0px 9px 0px #cacaca;
+
+    display: flex;
+    flex-direction: column;
+    transition: 0.2s;
+    position: relative;
+  }
+
+  .card:hover {
+    box-shadow: 0px 0px 9px #5a5a5a;
+  }
+
+  .p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card__img {
+    width: 336px;
+    height: 133px;
+    background-size: cover;
+    /* background-image: url(../images/dubai.jpg); */
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+    border-radius: 4px 4px 0 0;
+    background-color: blueviolet;
+  }
+  .dubai{
+    background-image: url(../images/dubai.jpg)
+  }
+  .paris{
+    background-image: url(../images/paris.jpg);
+  }
+  .london{
+    background-image: url(../images/london.jpg);
+  }
+  .ny{
+    background-image: url(../images/ny.jpg);
+  }
+  .male{
+    background-image: url(../images/male.jpg);
+  }
+  .istanbul{
+    background-image: url(../images/istanbul.jpg);
+  }
+  .rome{
+    background-image: url(../images/rome.jpg);
+  }
+  .zurich{
+    background-image: url(../images/zurich.jpg);
+  }
+
+  .card__descr-wrapper {
+    padding: 0.4rem 0.6rem;
+    display: grid;
+  }
+
+  .card__title {
+    color: var(--font-color);
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+
+  .card__title-top {
+    margin-top: 17px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8rem;
+  }
+
+  .card__descr {
+    margin: 12px;
+    font-size: 0.9rem;
+    text-align: center;
+
+    color: var(--font-color);
+  }
+
+  span {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
